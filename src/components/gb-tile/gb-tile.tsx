@@ -16,17 +16,19 @@ export class GBTile {
         </header>
 
         <main class="gb-tile">
-          <div>Product image</div>
-          <slot name="name">
-            <div class="name">Product name</div>
-          </slot>
-          <div class="price">Product price</div>
-          <div class="description">Product description</div>
-          <span onClick={this.buyNow}>
-            <slot name="buy-button">
-              <button>Buy now!</button>
+          <slot name="all">
+            <div>Product image</div>
+            <slot name="name">
+              <div class="name">Product name</div>
             </slot>
-          </span>
+            <div class="price">Product price</div>
+            <div class="description">Product description</div>
+            <span onClick={this.buyNow}>
+              <slot name="buy-button">
+                <button class="buy">Buy now!</button>
+              </slot>
+            </span>
+          </slot>
         </main>
       </div>
     );
