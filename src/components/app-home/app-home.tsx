@@ -22,12 +22,6 @@ export class AppHome {
             Profile page
           </button>
         </stencil-route-link>
-
-        <hr />
-        Tile example:
-        <gb-tile>
-          (Injected product name)
-        </gb-tile>
       </div>
     );
   }

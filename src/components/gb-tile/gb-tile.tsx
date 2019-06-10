@@ -17,13 +17,22 @@ export class GBTile {
 
         <main class="gb-tile">
           <div>Product image</div>
-          <slot>
+          <slot name="name">
             <div class="name">Product name</div>
           </slot>
           <div class="price">Product price</div>
           <div class="description">Product description</div>
+          <span onClick={this.buyNow}>
+            <slot name="buy-button">
+              <button>Buy now!</button>
+            </slot>
+          </span>
         </main>
       </div>
     );
+  }
+
+  buyNow() {
+    console.log('>> Clicked Buy Now button. (default functionality)')
   }
 }
